@@ -17,5 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: get-nspr
       run: sudo apt-get install libnspr4-dev
+    - name: get-ncurses
+      run: sudo apt-get install libncursesw5-dev
     - name: make
       run: cd src/sbbs3; make
