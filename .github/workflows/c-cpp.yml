@@ -21,3 +21,9 @@ jobs:
       run: sudo apt-get install libncursesw5-dev
     - name: make
       run: cd src/sbbs3; make
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sbbs-build-artifacts
+        path: |
+          src/sbbs3/**/*.exe.release/*
+          src/sbbs3/**/*.lib.release/*
