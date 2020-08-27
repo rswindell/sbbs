@@ -19,7 +19,9 @@ jobs:
       run: sudo apt-get install libnspr4-dev
     - name: get-ncurses
       run: sudo apt-get install libncursesw5-dev
-    - name: make
+    - name: make release
+      run: cd src/sbbs3; make RELEASE=1
+    - name: make debug
       run: cd src/sbbs3; make
     - uses: actions/upload-artifact@v2
       with:
